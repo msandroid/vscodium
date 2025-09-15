@@ -1,0 +1,400 @@
+**Armis: Multimodal Editing Environment**
+
+**概要**
+
+Armisは、自然言語の指示と複数のメディア素材を用いて、高度かつ柔軟な**動画・音声・画像編集および生成**を可能にするアプリケーション。  
+主な用途は**動画編集、ナレーション合成、解説動画制作、スタイルトランスファー、アセットのテンプレート化**。
+
+  
+
+**ブランディング**
+
+- **Web site カラー**
+
+- プライマリ: #006337（深緑）
+- アクセント1: #389F70（明るい緑）
+- アクセント2: #B6E3CE（淡いミント）
+- アクセント3: #8EF6C7（ライム寄りのシアン）
+- 背景: デジタル迷彩風グラデーション（ミリタリー感×デジタル感）
+
+  
+
+- AI IDE カラースキーム
+
+- 背景: 141414
+- カードコンポーネント: 1A1A1A
+- 文字１: 737373
+- 文字２: C7C7C7
+- アクセント1: #389F70（明るい緑）
+- アクセント2: #B6E3CE（淡いミント）
+- アクセント3: #8EF6C7（ライム寄りのシアン）
+
+  
+
+**開発手法**
+
+VS Code フォークに基づいた拡張指向開発 (Fork + Extension-Oriented Development)
+
+  
+
+**対応プラットフォーム**
+
+- Mac / Windows / Webアプリ
+
+  
+
+**技術スタック**
+
+- **フロントエンド**: React +Next.js
+- **UIコンポーネント**: [shadcn/ui](https://ui.shadcn.com/docs)
+
+  
+
+**UI構成**
+
+**左: チャットパネル（Agent Interaction）**
+
+- ユーザー指示入力、履歴表示、提案・進捗表示
+- 入力形式: テキスト / 添付（画像, PDF, 音声, 動画, URL）
+- コンポーネント: ChatWindow, PromptInputBox, FileDropZone
+
+**右: 編集/ビルドパネル（Media Build Panel）**
+
+- タブ:
+
+- Canvas（プレビュー）
+- Script（中間スクリプト編集）
+- Workflow（ワークフロー.json編集）
+- Timeline（映像・音声同期編集）
+- Assets（素材一覧）
+- Audio（ナレーション生成・確認）
+
+- ライブプレビュー & 差分ビルド
+
+  
+
+**入力対応形式**
+
+- チャット
+- URL（記事・動画など）
+- 文書（テキスト, TXT, PDF）
+- 画像（PNG, JPG, WEBP）
+- 動画（MP4, WMV）
+- 音声（MP3, WAV）
+
+  
+
+**主な機能**
+
+- 自然言語による動画・メディア編集
+- 動画から編集スタイルを抽出・再現
+- Whisper.cppで音声解析・文字起こし
+- Vibevoiceで合成音声生成（TTS, VITS2）
+- ComfyUI-cliによる画像生成
+- Mulmocast-cli
+- PlaywrightでWebスクレイピングによる素材収集
+- 3Dモデルからの動画生成
+- 音声モデル自動学習
+- アニメーション追加
+- ワークフローのテンプレート化（.json）
+
+  
+
+**操作フロー（例）**
+
+1. 素材アップロード or URL入力
+2. チャットで要望送信
+3. AIがスクリプト・画像編集・ナレーションを自動生成
+4. 右パネルでプレビュー・微修正
+5. 書き出し（mp4 + JSONテンプレート） or 保存
+
+  
+
+**強み**
+
+- 長尺動画（30〜60分）も数分で自動生成
+- 参考動画やURLからスタイルを学習・再現
+- 手直し可能な構造で表示・編集
+- テンプレート・ワークフローで再利用可能
+- 音声・画像・映像を横断するマルチモーダル編集
+
+  
+
+**# Resources URL**
+
+  
+
+  
+
+- LangChainJS: [https://github.com/langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs)
+- LangChainJS: [https://github.com/langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs)
+- LlamaIndex: [https://github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)
+
+  
+
+- Mlx-lm: [https://github.com/ml-explore/mlx-lm](https://github.com/ml-explore/mlx-lm)
+- llama.cpp: [https://github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)
+
+  
+
+- Comfy-cli: [https://github.com/Comfy-Org/comfy-cli](https://github.com/Comfy-Org/comfy-cli)
+- VibeVoice: [https://github.com/microsoft/VibeVoice](https://github.com/microsoft/VibeVoice)
+- Whisper.cpp: [https://github.com/ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)
+- ControlNet: [https://github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)
+- Playwright: [https://playwright.dev/](https://playwright.dev/)
+- yt-dlp: [https://github.com/yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)
+
+  
+
+https://github.com/langchain-ai/open-canvas
+
+https://github.com/microsoft/semantic-kernel
+
+https://huggingface.co/microsoft/VibeVoice-1.5B
+
+https://github.com/microsoft/VibeVoice
+
+https://github.com/ggml-org/whisper.cpp
+
+https://github.com/msandroid/vscodium
+
+https://github.com/msandroid/vscode
+
+https://github.com/continuedev/continue
+
+https://github.com/TechxGenus/CursorCore
+
+https://github.com/langchain-ai/langchainjs
+
+https://github.com/receptron/graphai
+
+https://github.com/receptron/mulmocast-cli
+
+https://github.com/microsoft/LightGBM
+
+https://github.com/run-llama/llama_index
+
+https://github.com/modelcontextprotocol
+
+https://github.com/lllyasviel/ControlNet
+
+  
+
+  
+
+**# Test**
+
+**ヴァイキング**とは、ヴァイキング時代（[Viking Age](https://en.wikipedia.org/wiki/Viking_Age)、[800年](https://ja.wikipedia.org/wiki/800%E5%B9%B4) - [1050年](https://ja.wikipedia.org/wiki/1050%E5%B9%B4)）と呼ばれる約250年間に[西ヨーロッパ](https://ja.wikipedia.org/wiki/%E8%A5%BF%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91)沿海部を侵略した[スカンディナヴィア](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AB%E3%83%B3%E3%83%87%E3%82%A3%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2)、[バルト海](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%AB%E3%83%88%E6%B5%B7)沿岸地域の武装集団を指す言葉。
+
+  
+
+上記の文章を音声にして
+
+
+**Structural Style Transfer**
+
+  
+
+**PRD: 「ヴァイキング解説動画制作」ワークフロー**
+
+**参照スタイル:** オールマイティラボ「ダチョウの解説動画」
+
+  
+
+**1. 参照素材取得**
+
+**目的:** 参照動画のスタイル情報を完全取得し、後のスタイル転写に活用する
+
+- **動画 & 音声ダウンロード**
+
+- yt-dlp で映像・音声を分離取得
+- 字幕が存在する場合は .srt 同時取得
+- **Armis特長活用:** Armis の _URL_インポート機能 で直接チャットパネルから取得可能
+
+- **記事取得**
+
+- Wikipedia API で「ヴァイキング」本文取得（JSON/HTML）
+- **Armis特長活用:** チャットパネルに URL 貼付→自動スクレイピング＆要約
+
+  
+
+  
+
+**2. 新規コンテンツ台本生成（ヴァイキング版）**
+
+**目的:** ヴァイキング情報を参照動画のスタイルで再構成
+
+- **記事要約**
+
+- LMMで重要トピックごとに短文化
+
+- **スタイル転写**
+
+- 参照動画のショット長、章構成、演出パターンを適用
+- MulmoScript形式（scene, narration, broll, sfx 指定）に変換
+- **Armis特長活用:** Scriptタブでライブ編集＆差分ビルド確認
+
+  
+
+**3. アセット収集**
+
+**目的:** 台本に沿ったB-roll・効果音・BGMを準備
+
+- **B-roll素材**
+
+- Pixabay / Pexels / Wikimedia Commons から取得
+- **Armis特長活用:** Assetsタブで直接プレビュー・差し替え可能
+
+- **効果音・BGM**
+
+- CC0・商用可の音源を選定
+
+- **TTSナレーション生成**
+
+- 日本語TTS（Style-Bert-VITS2）で参照動画の声質再現
+- **Armis特長活用:** Audioタブで即プレビュー＆波形編集（WaveSurfer.js）
+
+  
+
+**4. タイムライン合成**
+
+**目的:** 台本とアセットを結合し、完成映像を生成
+
+- **映像構築**
+
+- Mulmocast CLI で台本+アセットを統合
+- **Armis特長活用:** Timelineタブでドラッグ&ドロップ修正、リアルタイム反映
+
+- **映像レンダリング**
+
+- FFmpeg でBGM・効果音ミキシング、字幕焼き込み、トランジション適用
+- 長さ・テンポは参照動画に±10%以内で調整
+- **Armis特長活用:** Canvasタブでレンダリング前に差分プレビュー
+
+  
+
+**6. 出力 & 公開**
+
+**目的:** 完成品を多用途に展開
+
+- mp4 + JSONワークフロー（テンプレ化）として保存
+- YouTube / SNS へ即時アップロード（Armis公開API連携）
+- ワークフローは次回制作時のテンプレートとして再利用可
+
+  
+
+この構成だと、Armis の**差分ビルド・マルチモーダル編集・Structural Style Transfer・テンプレート化**が全工程に自然に入り込むので、ただの動画編集ツールではなく「制作資産の再利用型AIスタジオ」になります。
+
+  
+
+このPRDをもう少し発展させて、**Armis****の****UI****スクリーンフロー図**付きにすることもできますが、追加しますか？  
+そうすれば、開発者がすぐに実装着手できるレベルになります。
+
+
+
+vscodiumベースのaiIDEを一から作りたい。https://deepwiki.com/VSCodium/vscodium
+https://deepwiki.com/microsoft/vscode。mac, 
+
+UI componentはshadcn-ui. framaer motion, remotion, 
+AI SDKはlangchain.js, SemanticKernel, AI SDK, 
+AI code Assistant はcontinue, kilo-code, Roo-code, 
+LLM: API, llama.cpp, mlx-lm. 
+IndexingはLlama Index, Cursor Core,
+sttはwhisper.cpp, 
+tts:vibevoice, 
+image generation:comfy-cli, 
+
+
+
+VSCodiumにContinueを単なる拡張ではなく「コア機能」として統合し、独自IDEとして動かしたいということですね。これは通常の拡張機能インストールとは異なり、VSCodiumのソースコードレベルで組み込む形になります。手順と考慮点を整理します。
+
+  
+
+**1. 基本方針**
+
+- **VSCodiumのカスタムビルド**を作成する  
+    VSCodiumはVS Codeのオープンソース版なので、GitHub上のソースコードを取得し、自分の環境でビルドできます。  
+    → [https://github.com/VSCodium/vscodium](https://github.com/VSCodium/vscodium)
+- **Continueの機能統合方法**
+
+1. **拡張機能として組み込む**
+
+- 既存のContinue VS Code拡張を、VSCodiumのソースにプリインストールする形で組み込みます。
+
+3. **コアAPIレベルで統合**
+
+- Continueのバックエンドや通信APIをVSCodium内部に組み込み、拡張機能なしでも起動時に常駐させる。
+
+  
+
+**2. 具体的手順（概要）**
+
+**ステップ1: VSCodiumソースの取得**
+
+**git clone https://github.com/VSCodium/vscodium.git**
+
+**cd vscodium**
+
+**ステップ2: Node.js環境の準備**
+
+- 推奨Node.jsバージョンをインストール（公式README参照）
+- Yarnまたはnpmで依存関係をインストール
+
+**yarn**
+
+**ステップ3: Continue拡張の統合**
+
+- ContinueのVS Code拡張 (.vsix または GitHub ソース) を取得
+- VSCodiumの extensions フォルダに配置
+- package.json にプリロード設定を追加
+
+**"extensions": [**
+
+  **"extensions/continue"**
+
+**]**
+
+**ステップ4: Continueバックエンド統合**
+
+- Continueが使用するローカルLLMやAPIをVSCodium起動時に自動起動
+- main.ts または electron-main.js に初期化コードを追加
+
+**import { startContinueServer } from './extensions/continue/server';**
+
+**startContinueServer();**
+
+**ステップ5: UI統合**
+
+- サイドバー、コマンドパレット、ステータスバーにContinue機能を組み込む
+- 必要であれば、VSCodiumのメインUIにChatウィンドウやエージェントパネルを追加
+
+**ステップ6: ビルドとテスト**
+
+**yarn run build**
+
+**yarn run start**
+
+- Continueがコア機能として起動するか確認
+
+  
+
+**3. 注意点・考慮事項**
+
+- **アップデートの管理**
+
+- VSCodiumやContinueが更新されるたびに自前ビルドを更新する必要があります。
+
+- **ライセンス確認**
+
+- Continueはオープンソースですが、統合する場合のライセンス条件を必ず確認してください。
+
+- **パフォーマンス**
+
+- ContinueのAIモデルをコア機能として常駐させる場合、CPU/GPU負荷が高くなる可能性があります。
+
+- **APIキー管理**
+
+- ローカルまたはクラウドモデルを統合する場合、APIキーや認証情報の安全な管理が必要です。
+
+
+
